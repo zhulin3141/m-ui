@@ -11,14 +11,13 @@
     "serve": "vue-cli-service serve",
     "lint": "eslint --ext ./src/",
     "test": "npm run lint",
-    "build": "npm run lint & npm run test & gulp"
+    "build": "npm run lint & npm run test & gulp",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/zhulin3141/mint-ui"
-  },
-  "dependencies": {
-    
   },
   "peerDependencies": {
     "vue": "^2.5.17"
@@ -26,12 +25,13 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.17",
     "@vue/cli-service": "~4.5.17",
-    "vue-template-compiler": "^2.6.14",
-    "less": "^3.0.4",
-    "less-loader": "^5.0.0",
     "eslint": "4.18.2",
     "gulp": "^4.0.0",
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0",
     "mocha": "^6.0.2",
-    "vue": "^2.5.17"
+    "vue": "^2.5.17",
+    "vue-template-compiler": "^2.6.14",
+    "vuepress": "^1.9.7"
   }
 }
