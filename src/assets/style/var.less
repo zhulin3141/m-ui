@@ -12,10 +12,15 @@
 @min-height: 38px;
 @transition-duration: 0.2s;
 
-.base-font {
+.base-font(@font-size: @font-size, @line-height: @line-height, @color: @color) {
     font-size: @font-size;
     line-height: @line-height;
     color: @color;
+}
+.flex(@justify-content: flex-start, @align-items: flex-start) {
+    display: flex;
+    justify-content: @justify-content;
+    align-items: @align-items;
 }
 
 @button-bg: #fff;
