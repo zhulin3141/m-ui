@@ -15,7 +15,7 @@ permalink: /accordion
 ## 手风琴效果
 每次只会展示一个面板
 <ClientOnly>
-  <accordion-demo type="basic"/>
+  <accordion-demo type="accordion"/>
 </ClientOnly>
 
 ## Accordion 属性
