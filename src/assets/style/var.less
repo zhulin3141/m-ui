@@ -12,17 +12,6 @@
 @min-height: 38px;
 @transition-duration: 0.2s;
 
-.base-font(@font-size: @font-size, @line-height: @line-height, @color: @color) {
-    font-size: @font-size;
-    line-height: @line-height;
-    color: @color;
-}
-.flex(@justify-content: flex-start, @align-items: flex-start) {
-    display: flex;
-    justify-content: @justify-content;
-    align-items: @align-items;
-}
-
 @button-bg: #fff;
 @button-border: 1px;
 
@@ -35,3 +24,28 @@
 @border-color-focus: #999;
 @border-color-disabled: #f5f7fa;
 
+.collapsing{
+    height: 0;
+    overflow: hidden;
+    transition: height .35s ease;
+}
+
+.base-font(@font-size: @font-size, @line-height: @line-height, @color: @color) {
+    font-size: @font-size;
+    line-height: @line-height;
+    color: @color;
+}
+.border-top-radius() {
+    border-top-left-radius: @border-radius;
+    border-top-right-radius: @border-radius;
+}
+.border-bottom-radius() {
+    border-bottom-left-radius: @border-radius;
+    border-bottom-right-radius: @border-radius;
+}
+
+.flex(@justify-content: flex-start, @align-items: flex-start) {
+    display: flex;
+    justify-content: @justify-content;
+    align-items: @align-items;
+}
