@@ -86,6 +86,7 @@ export default {
 @import "../../../assets/style/var";
 
 .m-input-wrapper {
+  display: inline-table;
   & .m-input-group__before,
   & .m-input-group__after {
     display: table-cell;
