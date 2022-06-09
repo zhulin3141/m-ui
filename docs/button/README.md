@@ -1,14 +1,33 @@
-```
-<MButton>默认</MButton>
-<MButton type="success" size="sm" @click="handleClick">成功</MButton>
-<MButton type="primary" size="md" @click="handleClick">主要</MButton>
-<MButton type="danger" size="mini" @click="handleClick">失败</MButton>
-<MButton type="danger" size="sm" disabled>禁止</MButton>
-<MButton type="text" size="sm" @click="handleClick">文字</MButton>
+---
+sidebarDepth: 2
+permalink: /button
+---
 
-<MButtonGroup>
-<MButton>左</MButton>
-<MButton>中</MButton>
-<MButton>右</MButton>
-</MButtonGroup>
-```
+# Button - 按钮
+常用的操作按钮
+
+## 基础用法
+基础的按钮用法。
+
+<ClientOnly>
+  <button-demo type="basic"/>
+</ClientOnly>
+
+## 禁用状态
+按钮不可用状态。
+
+<ClientOnly>
+  <button-demo type="disabled"/>
+</ClientOnly>
+
+## 按钮组
+<ClientOnly>
+  <button-demo type="group"/>
+</ClientOnly>
+
+## Button 属性
+| 参数       |  说明          |   类型   |   可选值 |  默认值  |
+| --------- | -------------- | ------- | ------ | ------ |
+| type      | 按钮类型   | string  |  primary, success, danger, text      | primary  |
+| size      | 大小      | string   |   md, sm, mini                       |  md     |
+| disabled  | 禁用      | boolean  |                                      | false   |
