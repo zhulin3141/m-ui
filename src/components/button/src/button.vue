@@ -17,9 +17,9 @@ export default {
   props: {
     type: {
       type: String,
-      default: "",
+      default: "primary",
       validator(val) {
-        return ["", "primary", "success", "danger", "text"].includes(val);
+        return ["primary", "success", "danger", "text"].includes(val);
       },
     },
     size: {
@@ -111,6 +111,22 @@ export default {
   }
   &-text {
     border: @button-border solid @default-color;
+  }
+
+  &-md {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+  &-sm {
+    padding: 9px 15px;
+    font-size: 12px;
+    border-radius: 3px;
+  }
+  &-mini {
+    padding: 7px 15px;
+    font-size: 12px;
+    border-radius: 3px;
   }
 
   &:hover {
