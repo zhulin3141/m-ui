@@ -31,3 +31,4 @@ permalink: /button
 | type      | 按钮类型   | string  |  primary, success, danger, text      | primary  |
 | size      | 大小      | string   |   md, sm, mini                       |  md     |
 | disabled  | 禁用      | boolean  |                                      | false   |
+| outline   | 边框按钮  | boolean  |   -                                  | false   |

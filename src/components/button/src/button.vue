@@ -22,6 +22,10 @@ export default {
         return ["primary", "success", "danger", "text"].includes(val);
       },
     },
+    outline: {
+      type: Boolean,
+      default: false
+    },
     size: {
       type: String,
       default: "md",
@@ -39,6 +43,7 @@ export default {
     btnClasses() {
       return {
         [`m-button-${this.type}`]: this.type,
+        [`m-button-outline-${this.type}`]: this.outline,
         [`m-button-${this.size}`]: this.size,
         [`is-disabled`]: this.disabled,
       };
@@ -111,6 +116,22 @@ export default {
   }
   &-text {
     border: @button-border solid @default-color;
+  }
+  
+  &-outline-success, &-outline-primary, &-outline-danger {
+    background-color: @default-color;
+    &:hover {
+      color: @default-color;
+    }
+  }
+  &-outline-success {
+    color: @success-color;
+  }
+  &-outline-primary {
+    color: @primary-color;
+  }
+  &-outline-danger {
+    color: @danger-color;
   }
 
   &-md {

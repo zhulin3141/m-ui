@@ -8,8 +8,11 @@
             <MButton type="danger" size="sm" disabled>禁止</MButton>
             <MButton type="text" size="sm">文字</MButton>
 
+            <MButton type="success" size="sm" outline>成功</MButton>
+            <MButton type="primary" size="sm" outline>主要</MButton>
+
             <template slot="code">
-                使用type, size属性来定义 Button 的样式。
+                使用type, size, outline属性来定义 Button 的样式。
                 <pre><code>{{basicCode}}</code></pre>
             </template>
         </DemoContentBlock>
@@ -69,6 +72,9 @@ export default {
                 <MButton type="danger" size="mini" @click="handleClick">失败</MButton>
                 <MButton type="danger" size="sm" disabled>禁止</MButton>
                 <MButton type="text" size="sm" @click="handleClick">文字</MButton>
+
+                <MButton type="success" size="sm" outline>成功</MButton>
+                <MButton type="primary" size="sm" outline>主要</MButton>
             `.replace(/^ {16}/gm, '').trim(),
             disabledCode: `
                 <MButton disabled>默认</MButton>
