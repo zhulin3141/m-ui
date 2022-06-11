@@ -28,7 +28,8 @@ module.exports = {
                 children: [
                     '/button/',
                     '/input/',
-                    '/accordion/'
+                    '/accordion/',
+                    '/message/',
                 ]
             }
         ]

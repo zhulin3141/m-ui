@@ -1,6 +1,7 @@
 @font-size: 14px;
 @line-height: 16px;
 @color: #333;
+@bg-color: #fff;
 
 @default-color: #fff;
 @padding: .8em;
@@ -11,6 +12,7 @@
 @bg-color-disabled: #f5f7fa;
 @min-height: 38px;
 @transition-duration: 0.2s;
+@animate-duration: 0.2s;
 
 @button-bg: #fff;
 @button-border: 1px;
@@ -35,11 +37,11 @@
     line-height: @line-height;
     color: @color;
 }
-.border-top-radius() {
+.border-top-radius(@border-radius: @border-radius) {
     border-top-left-radius: @border-radius;
     border-top-right-radius: @border-radius;
 }
-.border-bottom-radius() {
+.border-bottom-radius(@border-radius: @border-radius) {
     border-bottom-left-radius: @border-radius;
     border-bottom-right-radius: @border-radius;
 }
@@ -48,4 +50,32 @@
     display: flex;
     justify-content: @justify-content;
     align-items: @align-items;
+}
+
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
 }
