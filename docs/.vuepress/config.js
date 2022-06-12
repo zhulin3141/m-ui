@@ -1,7 +1,7 @@
 module.exports = {
     title: 'M-UI',
     description: '一个基于 Vue 的 UI 框架',
-    base: '/m-ui/',
+    base: '/',
     themeConfig: {
         nav: [
             {
@@ -30,6 +30,7 @@ module.exports = {
                     '/input/',
                     '/accordion/',
                     '/message/',
+                    '/tabs/',
                 ]
             }
         ]

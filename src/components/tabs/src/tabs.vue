@@ -53,7 +53,6 @@ export default {
 
     this.$children.map((headComponent) => {
       if (headComponent.$options.name === "m-tabs-head") {
-        console.log(headComponent);
         headComponent.direction = this.direction;
       }
       headComponent.$children.map((itemComponent) => {
