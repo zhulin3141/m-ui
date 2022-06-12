@@ -120,41 +120,43 @@
           </MTabPanel>
       </MTab>
     </div>
+
+    <div id="row-table" class="row">
+      <m-table :data="tableData" striped border>
+        <m-table-column label="日期" prop="date" />
+        <m-table-column label="姓名" prop="name" />
+        <m-table-column label="地址" prop="address" />
+      </m-table>
+    </div>
   </div>
 </template>
 
 <script>
-import Vue from "vue";
-import MButton from "./components/button/src/button";
-import MButtonGroup from "./components/button/src/button-group";
-import MInput from "./components/input/src/input";
-import MAccordion from "./components/accordion/src/accordion";
-import MAccordionItem from "./components/accordion/src/accordion-item";
-import Message from "./components/message/src/message.js";
-import MTab from "./components/tabs/src/tabs.vue";
-import MTabHead from "./components/tabs/src/tabs-head.vue";
-import MTabItem from "./components/tabs/src/tabs-item.vue";
-import MTabPanel from "./components/tabs/src/tabs-panel.vue";
-
-Vue.prototype.$message = Message;
-
 export default {
   name: "App",
-  components: {
-    MButton,
-    MButtonGroup,
-    MInput,
-    MAccordion,
-    MAccordionItem,
-    MTab,
-    MTabHead,
-    MTabItem,
-    MTabPanel,
-  },
   data() {
     return {
       selected1: ["1"],
       selected2: ["4"],
+      tableData: [
+        {
+            date: '2016-05-02',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1518 弄'
+          }, {
+            date: '2016-05-04',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1517 弄'
+          }, {
+            date: '2016-05-01',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1519 弄'
+          }, {
+            date: '2016-05-03',
+            name: '王小虎',
+            address: '上海市普陀区金沙江路 1516 弄'
+          }
+      ]
     };
   },
   created() {},
