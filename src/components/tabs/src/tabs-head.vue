@@ -26,13 +26,15 @@ export default {
 
   mounted() {
     this.eventBus.$on("update:selected", (selectedName, vm) => {
-      let { left: parentLeft, top: parentTop } =
-        vm.$parent.$el.getBoundingClientRect();
+      // 父节点的位置信息
+      let { left: parentLeft, top: parentTop } = vm.$parent.$el.getBoundingClientRect();
+      // 当前节点的位置信息
       let { width, left, height, top } = vm.$el.getBoundingClientRect();
 
       const lineStyle = this.$refs.line.style;
       if (this.direction === "vertical") {
         lineStyle.height = `${height}px`;
+        // TODO: fix line style
         lineStyle.transform = `translateY(${top - parentTop}px)`;
       } else {
         lineStyle.width = `${width}px`;

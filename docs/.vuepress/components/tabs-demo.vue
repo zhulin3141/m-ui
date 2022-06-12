@@ -28,7 +28,7 @@
         </DemoContentBlock>
 
         <DemoContentBlock v-if="type === 'vertical'">
-            <MTabs selected="tab2" direction="vertical">
+            <MTabs selected="tab1" direction="vertical">
                 <MTabHead>
                     <MTabItem name="tab1">tab1</MTabItem>
                     <MTabItem name="tab2">tab2</MTabItem>
