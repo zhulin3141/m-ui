@@ -74,6 +74,52 @@
       <MButton @click="showPosMessage">指定位置弹出</MButton>
       <MButton @click="showDefMessage">自定义关闭按钮</MButton>
     </div>
+
+    <div id="row-tab" class="row">
+      <MTab selected="tab1">
+        <MTabHead>
+          <MTabItem name="tab1">tab1</MTabItem>
+          <MTabItem name="tab2">tab2</MTabItem>
+          <MTabItem name="tab3">tab3</MTabItem>
+          <MTabItem name="tab4">tab4</MTabItem>
+        </MTabHead>
+        <MTabPanel name="tab1">
+            tab1
+          </MTabPanel>
+          <MTabPanel name="tab2">
+            tab2
+          </MTabPanel>
+          <MTabPanel name="tab3">
+            tab3
+          </MTabPanel>
+          <MTabPanel name="tab4">
+            tab4
+          </MTabPanel>
+      </MTab>
+    </div>
+
+    <div id="row-tab" class="row">
+      <MTab selected="tab1" direction="vertical">
+        <MTabHead>
+          <MTabItem name="tab1">tab1</MTabItem>
+          <MTabItem name="tab2">tab2</MTabItem>
+          <MTabItem name="tab3">tab3</MTabItem>
+          <MTabItem name="tab4">tab4</MTabItem>
+        </MTabHead>
+        <MTabPanel name="tab1">
+            tab1
+          </MTabPanel>
+          <MTabPanel name="tab2">
+            tab2
+          </MTabPanel>
+          <MTabPanel name="tab3">
+            tab3
+          </MTabPanel>
+          <MTabPanel name="tab4">
+            tab4
+          </MTabPanel>
+      </MTab>
+    </div>
   </div>
 </template>
 
@@ -85,6 +131,10 @@ import MInput from "./components/input/src/input";
 import MAccordion from "./components/accordion/src/accordion";
 import MAccordionItem from "./components/accordion/src/accordion-item";
 import Message from "./components/message/src/message.js";
+import MTab from "./components/tabs/src/tabs.vue";
+import MTabHead from "./components/tabs/src/tabs-head.vue";
+import MTabItem from "./components/tabs/src/tabs-item.vue";
+import MTabPanel from "./components/tabs/src/tabs-panel.vue";
 
 Vue.prototype.$message = Message;
 
@@ -96,6 +146,10 @@ export default {
     MInput,
     MAccordion,
     MAccordionItem,
+    MTab,
+    MTabHead,
+    MTabItem,
+    MTabPanel,
   },
   data() {
     return {
