@@ -132,6 +132,13 @@
     <div id="row-modal" class="row">
       <m-button @click="showModal1">显示模态窗口</m-button>
     </div>
+
+    <div id="row-progress" class="row">
+      <m-progress :percentage="50" customColor="#409eff" />
+
+      <m-progress type="circle" :percentage="50" customColor="#409eff" />
+      <m-progress type="circle" :percentage="90" customColor="#409eff" />
+    </div>
   </div>
 </template>
 
@@ -213,7 +220,7 @@ export default {
 };
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 html,
 body {
   margin: 0;

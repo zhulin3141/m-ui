@@ -11,6 +11,7 @@ import MTabPanel from "./components/tabs/src/tabs-panel.vue";
 import MTable from "./components/table/src/table.vue";
 import MTableColumn from "./components/table/src/table-column.vue";
 import MModal from "./components/modal/src/modal.js";
+import MProgress from "./components/progress/src/progress.vue";
 
 const components = {
     MButton,
@@ -26,6 +27,7 @@ const components = {
     MTable,
     MTableColumn,
     MModal,
+    MProgress,
 }
 
 export default {
