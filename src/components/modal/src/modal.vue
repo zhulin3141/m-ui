@@ -20,8 +20,12 @@
 </template>
 
 <script>
+import MButton from "../../button/src/button.vue";
+
 export default {
-  components: {},
+  components: {
+    MButton,
+  },
   name: "m-modal",
   props: {},
   data() {
