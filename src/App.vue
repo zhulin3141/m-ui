@@ -128,6 +128,10 @@
         <m-table-column label="地址" prop="address" />
       </m-table>
     </div>
+
+    <div id="row-modal" class="row">
+      <m-button @click="showModal1">显示模态窗口</m-button>
+    </div>
   </div>
 </template>
 
@@ -196,6 +200,15 @@ export default {
         },
       });
     },
+
+    showModal1() {
+      this.$alert('这是一段内容', '标题名称', {
+          confirmButtonText: '确定',
+          callback: action => {
+            this.$message("这是一条提示");
+          }
+      })
+    }
   },
 };
 </script>

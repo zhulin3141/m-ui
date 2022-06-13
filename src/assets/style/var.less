@@ -34,6 +34,10 @@
     overflow: hidden;
     transition: height .35s ease;
 }
+
+.fade{
+    transition: opacity .15s linear;
+}
 .no-radius(){
     border-radius: 0;
 }
@@ -50,6 +54,9 @@
 .border-bottom-radius(@border-radius: @border-radius) {
     border-bottom-left-radius: @border-radius;
     border-bottom-right-radius: @border-radius;
+}
+.border-radius(@border-radius: @border-radius) {
+    border-radius: @border-radius;
 }
 
 .flex(@justify-content: flex-start, @align-items: flex-start) {

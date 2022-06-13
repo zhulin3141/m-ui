@@ -10,6 +10,7 @@ import MTabItem from "./components/tabs/src/tabs-item.vue";
 import MTabPanel from "./components/tabs/src/tabs-panel.vue";
 import MTable from "./components/table/src/table.vue";
 import MTableColumn from "./components/table/src/table-column.vue";
+import MModal from "./components/modal/src/modal.js";
 
 const components = {
     MButton,
@@ -24,6 +25,7 @@ const components = {
     MTabPanel,
     MTable,
     MTableColumn,
+    MModal,
 }
 
 export default {
@@ -33,5 +35,6 @@ export default {
         }
 
         app.prototype.$message = Message
+        app.prototype.$alert = MModal
     }
 }
