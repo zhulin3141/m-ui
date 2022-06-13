@@ -11,7 +11,7 @@
     "serve": "vue-cli-service serve",
     "lint": "eslint --ext ./src/",
     "test": "npm run lint",
-    "build": "npm run lint & npm run test & gulp",
+    "build": "vue-cli-service build",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },

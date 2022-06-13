@@ -12,3 +12,5 @@ yarn-error.log.*
 .vscode
 .npmrc
 .envrc
+
+dist
