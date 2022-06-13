@@ -7,6 +7,7 @@
 
     <input
       class="m-input"
+      :class="dynamicClass"
       :value="value"
       :type="type"
       :disabled="disabled"
@@ -59,7 +60,13 @@ export default {
     return {};
   },
 
-  computed: {},
+  computed: {
+    dynamicClass() {
+      return {
+        ['no-radius']: this.$slots.before || this.$slots.after,
+      }
+    }
+  },
 
   mounted() {},
 
@@ -131,6 +138,9 @@ export default {
     }
     &::placeholder {
       color: @color-placeholder;
+    }
+    &.no-radius{
+      .no-radius();
     }
   }
 }
