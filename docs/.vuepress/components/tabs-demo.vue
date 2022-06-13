@@ -9,7 +9,7 @@
                     <MTabItem name="tab4">tab4</MTabItem>
                 </MTabHead>
                 <MTabPanel name="tab1">
-                    tab1
+                    <MButton>button</MButton>
                 </MTabPanel>
                 <MTabPanel name="tab2">
                     tab2
@@ -89,6 +89,7 @@ import MTabs from '../../../src/components/tabs/src/tabs';
 import MTabHead from '../../../src/components/tabs/src/tabs-head';
 import MTabItem from '../../../src/components/tabs/src/tabs-item';
 import MTabPanel from '../../../src/components/tabs/src/tabs-panel';
+import MButton from '../../../src/components/button/src/button.vue';
 
 export default {
     components: {
@@ -96,6 +97,7 @@ export default {
         MTabHead,
         MTabItem,
         MTabPanel,
+        MButton,
         DemoContentBlock,
     },
     props: {
@@ -115,7 +117,7 @@ export default {
                         <MTabItem name="tab4">tab4</MTabItem>
                     </MTabHead>
                     <MTabPanel name="tab1">
-                        tab1
+                        <MButton>button</MButton>
                     </MTabPanel>
                     <MTabPanel name="tab2">
                         tab2

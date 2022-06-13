@@ -31,6 +31,7 @@ module.exports = {
                     '/accordion/',
                     '/message/',
                     '/tabs/',
+                    '/table/',
                 ]
             }
         ]

@@ -35,7 +35,7 @@ export default {
     },
     computed: {
         columns() {
-            return this.$slots.default.map(({data: {attrs}}) => ({
+            return this.$slots.default.filter(node=>node.data).map(({data: {attrs}}) => ({
                 prop: attrs.prop,
                 label: attrs.label,
             }))
