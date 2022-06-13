@@ -88,7 +88,7 @@ export default {
 .collapse-transition{
   &-enter-active, &-leave-active{
     overflow: hidden;
-    transition: all 0.35s ease;
+    transition: all 0.15s ease;
   }
   &-enter-from, &-leave-to{
     overflow: hidden;
