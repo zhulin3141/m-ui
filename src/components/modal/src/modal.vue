@@ -11,7 +11,9 @@
             <slot>{{ message }}</slot>
           </div>
           <div class="modal-footer">
-            <m-button size="mini" @click="handleConfirmButton">{{ confirmButtonText }}</m-button>
+            <m-button size="mini" @click="handleConfirmButton">{{
+              confirmButtonText
+            }}</m-button>
           </div>
         </div>
       </div>
@@ -32,6 +34,12 @@ export default {
     return {
       showModal: true,
     };
+  },
+  beforeCreate() {
+    document.querySelector("body").setAttribute("style", "overflow: hidden;");
+  },
+  beforeDestroy() {
+    document.querySelector("body").setAttribute("style", "overflow: auto;");
   },
   methods: {
     handleAction() {
@@ -104,7 +112,7 @@ export default {
   & .modal-body {
     padding: 10px 15px;
   }
-  & .modal-footer{
+  & .modal-footer {
     padding: 5px 15px 5px;
     text-align: right;
   }
