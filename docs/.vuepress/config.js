@@ -34,6 +34,7 @@ module.exports = {
                     '/table/',
                     '/modal/',
                     '/progress/',
+                    '/carousel/',
                 ]
             }
         ]
