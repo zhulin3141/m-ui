@@ -2,24 +2,40 @@
     <table class="m-table" :border="this.border ? 1: 0" :class="{'table-striped': this.striped}">
         <thead>
             <tr>
-                <th v-for="column in columns" :key="column.prop">
-                    {{ column.label }}
+                <th v-for="(column, key) in columns" :key="key">
+                    {{ column.title }}
                 </th>
             </tr>
         </thead>
         <tbody>
-            <tr v-for="(row, index) in rows" :key="index">
-                <td v-for="(v, k) in row" :key="k">{{ v }}</td>
+            <tr v-for="(row, rdx) in data" :key="rdx">
+                <td v-for="(col, cdx) in columns" :key="cdx">
+                    <template v-if="col.render">
+                        <m-table-column :column="col" :row="row" :index="rdx" :render="col.render"></m-table-column>
+                    </template>
+                    <template v-else>
+                        {{ row[col.key] }}
+                    </template>
+                </td>
             </tr>
         </tbody>
     </table>
 </template>
 
 <script>
+import MTableColumn from "./table-column.vue";
 
 export default {
     name: "m-table",
+    components: {
+        MTableColumn,
+    },
     props: {
+        columns: {
+            type: Array,
+            require: true,
+            default: () =>[],
+        },
         data: {
             type: Array,
             default: () => [],
@@ -34,20 +50,6 @@ export default {
         }
     },
     computed: {
-        columns() {
-            return this.$slots.default.filter(node=>node.data).map(({data: {attrs}}) => ({
-                prop: attrs.prop,
-                label: attrs.label,
-            }))
-        },
-        rows() {
-            return this.data.map(item=>{
-                return this.columns.reduce((prev, {prop})=>{
-                    prev[prop] = item[prop];
-                    return prev;
-                }, {})
-            })
-        }
     }
 }
 </script>
