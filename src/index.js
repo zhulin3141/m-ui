@@ -12,6 +12,8 @@ import MTable from "./components/table/src/table.vue";
 import MTableColumn from "./components/table/src/table-column.vue";
 import MModal from "./components/modal/src/modal.js";
 import MProgress from "./components/progress/src/progress.vue";
+import MCarousel from "./components/carousel/src/carousel.vue";
+import MCarouselItem from "./components/carousel/src/carousel-item.vue";
 
 const components = {
     MButton,
@@ -28,6 +30,8 @@ const components = {
     MTableColumn,
     MModal,
     MProgress,
+    MCarousel,
+    MCarouselItem,
 }
 
 export default {

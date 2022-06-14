@@ -139,6 +139,14 @@
       <m-progress type="circle" :percentage="50" customColor="#409eff" />
       <m-progress type="circle" :percentage="90" customColor="#409eff" />
     </div>
+
+    <div id="row-carousel" class="row">
+      <m-carousel height="280px" pagePosition="inside">
+        <m-carousel-item v-for="item in 4" :key="item">
+          <h3 class="small">{{ item }}</h3>
+        </m-carousel-item>
+      </m-carousel>
+    </div>
   </div>
 </template>
 
@@ -243,5 +251,27 @@ body {
       border-radius: 0;
     }
   }
+}
+
+.m-carousel-item h3{
+  text-align: center;
+  line-height: 270px;
+  color: #fff;
+}
+
+.m-carousel-item:nth-child(3){
+    background-color: #76fc76;
+}
+.m-carousel-item:nth-child(4){
+    background-color: rgb(253, 253, 115);
+}
+.m-carousel-item:nth-child(5){
+    background-color: rgb(117, 117, 248);
+}
+.m-carousel-item:nth-child(6){
+    background-color: pink;
+}
+.m-carousel-item:nth-child(7){
+    background-color: rgb(248, 205, 125);
 }
 </style>
