@@ -1,5 +1,5 @@
 <template>
-  <div class="m-progress">
+  <div class="m-progress" :class="circleWrapperClass">
     <div class="m-progress-bar m-progress-line" v-if="type == 'line'">
       <div class="m-progress_inner" :style="dynamicStyle"></div>
     </div>
@@ -63,6 +63,11 @@ export default {
     },
   },
   computed: {
+    circleWrapperClass() {
+      return {
+        'm-progress-circle-wrapper' : this.type === 'circle'
+      }
+    },
     dynamicStyle() {
       return {
         "background-color": this.customColor,
@@ -120,10 +125,14 @@ export default {
 @import "../../../assets/style/var";
 
 .m-progress {
+  margin-bottom: 15px;
   & .m-progress-circle {
     position: relative;
     display: inline-block;
   }
+}
+.m-progress-circle-wrapper{
+  display: inline-block;
 }
 .m-progress-text {
   position: absolute;

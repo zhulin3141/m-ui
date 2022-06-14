@@ -33,6 +33,7 @@ module.exports = {
                     '/tabs/',
                     '/table/',
                     '/modal/',
+                    '/progress/',
                 ]
             }
         ]
